@@ -1,0 +1,5 @@
+target 'LoginScreenApp' do
+platform :ios, '8.0'
+use_frameworks!
+pod 'ReachabilitySwift'
+end

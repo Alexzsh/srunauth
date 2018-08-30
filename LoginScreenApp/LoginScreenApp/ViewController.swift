@@ -5,15 +5,14 @@
 
 
 import UIKit
-
-
+import Reachability
 class ViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate  {
     
-    
+    var reachability = Reachability()!
     var command = "do_login"
     let login_url = "http://192.0.0.6/cgi-bin/"
-    var uid = "1234"
-
+    var uid = "8418135901544"
+    
     
     @IBOutlet var username_input: UITextField!
     @IBOutlet var password_input: UITextField!
@@ -27,7 +26,10 @@ class ViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate 
         super.viewDidLoad()
         username_input.text = "linshi120"
         password_input.text = "654321"
+        
+
     }
+
     // return 取消textfield的第一相应
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -39,22 +41,25 @@ class ViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate 
     }
 
     func checkWifi() {
-        var wifi = false
-        let reachability = Reachability()!
-        
+        if reachability.connection == .wifi {
+            let status = self.do_login(username:self.username_input.text!, password: self.password_input.text!,command: self.command,connectStatus: reachability.isReachableViaWiFi)
+            self.getRes(datastring: status, command: self.command)
+        } else {
+            self.showToast(message: ("Please connect wifi"))
+        }
         reachability.whenReachable = { reachability in
             if reachability.connection == .wifi {
-                //self.showToast(message: ("Connected WiFi"))
-                let status = self.do_login(username:self.username_input.text!, password: self.password_input.text!,command: self.command,connectStatus: reachability.isReachableViaWiFi)
-                self.getRes(datastring: status, command: self.command)
+                self.showToast(message: ("OK!Let's Login!"))
+                print(reachability.isReachableViaWiFi)
             } else {
                 self.showToast(message: ("Please connect wifi"))
+                print(reachability.isReachableViaWiFi)
             }
         }
         reachability.whenUnreachable = { _ in
             print("Not reachable")
         }
-        
+
         do {
             try reachability.startNotifier()
         } catch {
@@ -63,77 +68,12 @@ class ViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate 
         
         
     }
-    func getLocalIPAddressForCurrentWiFi() -> String? {
-        
-        var address: String?
-        
-        
-        
-        // get list of all interfaces on the local machine
-        
-        var ifaddr: UnsafeMutablePointer<ifaddrs>? = nil
-        
-        guard getifaddrs(&ifaddr) == 0 else {
-            
-            return nil
-            
-        }
-        
-        guard let firstAddr = ifaddr else {
-            
-            return nil
-            
-        }
-        
-        for ifptr in sequence(first: firstAddr, next: { $0.pointee.ifa_next }) {
-            
-            
-            
-            let interface = ifptr.pointee
-            
-            
-            
-            // Check for IPV4 or IPV6 interface
-            
-            let addrFamily = interface.ifa_addr.pointee.sa_family
-            
-            if addrFamily == UInt8(AF_INET) || addrFamily == UInt8(AF_INET6) {
-                
-                // Check interface name
-                
-                let name = String(cString: interface.ifa_name)
-                
-                if name == "en0" {
-                    
-                    // Convert interface address to a human readable string
-                    
-                    var addr = interface.ifa_addr.pointee
-                    
-                    var hostName = [CChar](repeating: 0, count: Int(NI_MAXHOST))
-                    
-                    getnameinfo(&addr,
-                                
-                                socklen_t(interface.ifa_addr.pointee.sa_len),
-                                
-                                &hostName, socklen_t(hostName.count), nil, socklen_t(0), NI_NUMERICHOST)
-                    
-                    address = String(cString: hostName)
-                    
-                }
-                
-            }
-            
-        }
-        
-        freeifaddrs(ifaddr)
-        
-        return address
-        
-    }
+    
     @IBAction func DoLogin(_ sender: AnyObject) {
         UIApplication.shared.keyWindow?.endEditing(true)//通用的隐藏键盘的方式
         self.command="do_login"
         checkWifi()
+        
         
     }
     @IBAction func DoLogout(_ sender: AnyObject) {
@@ -154,12 +94,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate 
     
     
     func do_login(username:String,password:String,command:String,connectStatus:Bool) -> String{
-        if connectStatus && command=="do_login"  {
-            return("Had logined")
-        }
-        else if !connectStatus && command=="do_logout"{
-            return("Had not logined")
-        }
+      
 
         let passwd_md5 = password.md5()[NSRange(location: 8, length: 16)]
         let access_url:String = login_url+command

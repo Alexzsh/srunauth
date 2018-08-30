@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginScreenApp/ViewController.swift"
-            timestampString = "555743751.302168"
+            timestampString = "557308200.522442"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "do_login(username:password:command:connectStatus:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginScreenApp/ViewController.swift"
-            timestampString = "555743751.302498"
+            timestampString = "557308200.522541"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "do_login(username:password:command:connectStatus:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,23 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginScreenApp/ViewController.swift"
-            timestampString = "555743751.302695"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "getLocalIPAddressForCurrentWiFi()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LoginScreenApp/ViewController.swift"
-            timestampString = "555743751.302878"
+            timestampString = "557308200.5226099"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
@@ -74,27 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginScreenApp/ViewController.swift"
-            timestampString = "555743751.303051"
+            timestampString = "557308200.5226721"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "checkWifi()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LoginScreenApp/ViewController.swift"
-            timestampString = "555743751.303238"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "do_login(username:password:command:connectStatus:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -102,15 +70,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginScreenApp/ViewController.swift"
-            timestampString = "555743751.303424"
+            timestampString = "557308200.5227571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "DoLogout(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -118,33 +86,79 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "LoginScreenApp/ViewController.swift"
-            timestampString = "555743751.3035949"
+            timestampString = "557308200.5228159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
-            landmarkName = "DoLogin(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LoginScreenApp/ViewController.swift"
-            timestampString = "555743777.3486741"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "146"
-            endingLineNumber = "146"
-            landmarkName = "getRes(datastring:command:)"
-            landmarkType = "7">
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LoginScreenApp.ViewController.command.getter : Swift.String"
+                  moduleName = "LoginScreenApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/bedroom/%20/LoginScreenApp/LoginScreenApp/ViewController.swift"
+                  timestampString = "557297260.142081"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LoginScreenApp.ViewController.command.setter : Swift.String"
+                  moduleName = "LoginScreenApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/bedroom/%20/LoginScreenApp/LoginScreenApp/ViewController.swift"
+                  timestampString = "557297260.144331"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LoginScreenApp.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; LoginScreenApp.ViewController"
+                  moduleName = "LoginScreenApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/bedroom/%20/LoginScreenApp/LoginScreenApp/ViewController.swift"
+                  timestampString = "557297260.146454"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LoginScreenApp.ViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;LoginScreenApp.ViewController&gt;"
+                  moduleName = "LoginScreenApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user/Documents/bedroom/%20/LoginScreenApp/LoginScreenApp/ViewController.swift"
+                  timestampString = "557297260.148505"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
